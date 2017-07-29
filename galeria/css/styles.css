@@ -29,14 +29,16 @@ body{
     border-radius: 2px;
 }
 .full{
+    width: 100%;
     position: absolute;
     top:10%;
-    left: 16%;
+    left: 25%;
+    right: 25%;
     display: none;
 }
 .full img{
-    width: 1000px;
-    height: 800px;
+    width: 50%;
+    height: 350%;
 }
 img.imagen-full{
     border: solid 6px #fff;
@@ -44,9 +46,9 @@ img.imagen-full{
     /*box-shadow: 4px 4px 4px silver;*/
 }
 .boton-close{
-    position: absolute;
-    top:10px;
-    right: 10px;
+    position: relative;
+    top: 10%;
+    left: 49%;
     height: 30px;
     width: 30px;
     text-align: center;
