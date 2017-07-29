@@ -17,10 +17,12 @@ body{
     margin: 0 auto;
     margin-top: 60px;
     background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.contenedor{
-    margin: 5px;
-    float: left;
+.contenedor {
+    margin-bottom: 10px;
 }
 .thumbnail img{
     width: 200px;
@@ -30,15 +32,31 @@ body{
 }
 .full{
     width: 100%;
-    position: absolute;
-    top:10%;
-    left: 25%;
-    right: 25%;
-    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+.active .full {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.full__content {
+    width: auto;
+    display: flex;
+    flex-direction: column;
 }
 .full img{
-    width: 50%;
-    height: 350%;
+    max-width: 600px;
+    height: auto;
 }
 img.imagen-full{
     border: solid 6px #fff;
@@ -46,13 +64,13 @@ img.imagen-full{
     /*box-shadow: 4px 4px 4px silver;*/
 }
 .boton-close{
-    position: relative;
-    top: 10%;
-    left: 49%;
     height: 30px;
     width: 30px;
     text-align: center;
     cursor:pointer;
+    margin-left: auto;
+    margin-bottom: 5px;
+    order: -1;
 }
 .boton-close img{
     width: 30px;
